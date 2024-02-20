@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -135,13 +136,48 @@ namespace PracticeNet
             {
                 for (int j = 0; j < n; j++)
                 {
-                    Console.WriteLine(A[i,j]);
+                    Console.Write(A[i,j]+"\t");
+                }
+                Console.WriteLine();
+            }
+            int[,] B = new int[m, n];
+            Console.WriteLine("Enter the Second matrix");
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    B[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
             }
-
+            Console.WriteLine("Second matrix");
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(B[i, j]+"\t");
+                }
+                Console.WriteLine();
+            }
+            int[,]c= new int[m, n];
+            for(int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    c[i, j] = A[i, j] + B[i, j];
+                }
+            }
+            Console.WriteLine("Matrix Addition");
+            for (int i = 0; i < m; i++)
+            {
+                for(int j = 0; j < n; j++)
+                {
+                    Console.Write(c[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
         }
-
-
+      
+            
 
     }
 }
