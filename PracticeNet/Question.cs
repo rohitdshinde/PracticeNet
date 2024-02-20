@@ -106,13 +106,38 @@ namespace PracticeNet
         public void Q4()
         {
             Console.WriteLine("Enter a string");
-            string strr = Console.ReadLine(); // "rohit" => ['r', 'o', 'h', ,'i', 't'] 
+            string strr = Console.ReadLine(); 
 
-            char[] str1 = strr.ToCharArray();
+            char[] str1 = strr.ToCharArray();// "rohit" => ['r', 'o', 'h', ,'i', 't'] 
             Array.Reverse(str1);
             Console.WriteLine(str1);
 
 
+
+        }
+        public void Q5()
+        {
+            Console.WriteLine("Enter number of rows and columns of the matrix");
+            int m=Convert.ToInt32(Console.ReadLine());
+            int n=Convert.ToInt32(Console.ReadLine());
+
+            int[,] A = new int[m, n];
+            Console.WriteLine("Enter the First matrix");
+            for(int i = 0; i < m; i++)
+            {
+                for(int j = 0; j < n; j++)
+                {
+                    A[i,j]= Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("First matrix");
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.WriteLine(A[i,j]);
+                }
+            }
 
         }
 
