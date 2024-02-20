@@ -92,17 +92,31 @@ namespace PracticeNet
             Console.WriteLine("Enter a string");
             string strr = Console.ReadLine();
 
-            string[] words = strr.Split(' ');
+            //string[] words = strr.Split(' ');
 
             Console.WriteLine("Reverse a string:");
-            for (int i = words.Length - 1; i >= 0; i--)
+            for (int i = strr.Length - 1; i >= 0; i--)
             {
-                Console.WriteLine(words[i] + "");
+                Console.Write(strr[i] + "");
             }
             Console.ReadLine();
 
 
         }
-       
+        public void Q4()
+        {
+            Console.WriteLine("Enter a string");
+            string strr = Console.ReadLine(); // "rohit" => ['r', 'o', 'h', ,'i', 't'] 
+
+            char[] str1 = strr.ToCharArray();
+            Array.Reverse(str1);
+            Console.WriteLine(str1);
+
+
+
+        }
+
+
+
     }
 }
